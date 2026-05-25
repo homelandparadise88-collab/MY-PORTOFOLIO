@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', sans-serif;
+}
+
+body{
+    background:#0b1220;
+    color:#e5e7eb;
+}
+
+/* NAVBAR */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(11,18,32,0.7);
+    backdrop-filter: blur(12px);
+    border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+header div{
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+header nav a{
+    color:#e5e7eb;
+    text-decoration:none;
+    margin-left:22px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+header nav a:hover{
+    color:#38bdf8;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 20px;
+    background: radial-gradient(circle at top, #1e293b, #0b1220);
+}
+
+.hero h1{
+    font-size:56px;
+    font-weight:700;
+}
+
+.hero span{
+    color:#38bdf8;
+}
+
+.hero p{
+    max-width:650px;
+    margin:20px auto;
+    color:#94a3b8;
+    font-size:18px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 32px;
+    background:#38bdf8;
+    color:#0b1220;
+    border-radius:50px;
+    font-weight:600;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+    background:#0ea5e9;
+}
+
+/* SECTIONS */
+section{
+    padding:120px 8%;
+}
+
+/* TITLURI */
+h2{
+    font-size:32px;
+    margin-bottom:30px;
+}
+
+/* GRID PROIECTE */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:22px;
+}
+
+/* CARDURI */
+.card{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.06);
+    padding:25px;
+    border-radius:18px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#38bdf8;
+}
+
+/* CONTACT */
+#contact p{
+    color:#94a3b8;
+}CSS.card img{
+    width:100%;
+    border-radius:12px;
+    margin-bottom:10px;
+}
+
+.skill{
+    margin-bottom:15px;
+    max-width:500px;
+}
+
+.skill p{
+    margin-bottom:6px;
+}
+
+.bar{
+    width:100%;
+    height:10px;
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.bar div{
+    height:100%;
+    background:#38bdf8;
+}
+
+/* ANIMAȚIE SIMPLĂ */
+section{
+    opacity:0;
+    transform:translateY(30px);
+    animation:fadeIn 1s forwards;
+}
+
+section:nth-child(1){animation-delay:0.1s;}
+section:nth-child(2){animation-delay:0.2s;}
+section:nth-child(3){animation-delay:0.3s;}
+
+@keyframes fadeIn{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}.logo{
+    font-weight:700;
+    font-size:20px;
+    color:#38bdf8;
+}
+
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* NAV DESKTOP */
+nav{
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:#e5e7eb;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+/* GLOW EFFECT */
+.card:hover{
+    box-shadow:0 0 20px rgba(56,189,248,0.3);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .menu-toggle{
+        display:block;
+        color:white;
+    }
+
+    nav{
+        position:absolute;
+        top:70px;
+        right:0;
+        background:#0b1220;
+        flex-direction:column;
+        width:200px;
+        padding:20px;
+        display:none;
+        border-left:1px solid rgba(255,255,255,0.1);
+    }
+
+    nav.active{
+        display:flex;
+    }
+}html{
+    scroll-behavior:smooth;
+}
+
+/* HERO GLASS EFFECT */
+.hero{
+    background: radial-gradient(circle at top, #1e293b, #0b1220);
+}
+
+/* BUTTON PREMIUM */
+.btn{
+    box-shadow:0 0 15px rgba(56,189,248,0.3);
+}
+
+.btn:hover{
+    box-shadow:0 0 25px rgba(56,189,248,0.6);
+}
+
+/* SECTION HEADERS */
+h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+/* CONTACT + HIRE SECTION */
+#contact, #hire{
+    text-align:center;
+}
+
+/* FLOATING EFFECT ON CARDS */
+.card{
+    transition:0.4s ease;
+}
+
+.card:hover{
+    transform:translateY(-12px) scale(1.03);
+}
+
+/* FADE IN ANIMATION STRONGER */
+section{
+    opacity:0;
+    transform:translateY(40px);
+    animation:fadeUp 0.8s forwards;
+}
+
+@keyframes fadeUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
